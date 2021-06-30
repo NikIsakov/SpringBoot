@@ -40,20 +40,20 @@ public class ProductRepository {
         products.get(id).toString();
     }
 
-//    public void changeId(List<Product> products, Long id, Long newId){//получение товара по id
-//        Product product = products.get(id);
-//        product.setId(newId);
-//    }
-//
-//    public void changeTitle(List<Product> products, Long id, String newTitle){
-//        Product product = products.get(id);
-//        product.setTitle(newTitle);
-//    }
-//
-//    public void changeCost(List<Product> products, Long id, float newCost){
-//        Product product = products.get(id);
-//        product.setCost(newCost);
-//    }
+    public void changeId(List<Product> products, int id, Long newId){//получение товара по id
+        Product product = products.get(id);
+        product.setId(newId);
+    }
+
+    public void changeTitle(List<Product> products, int id, String newTitle){
+        Product product = products.get(id);
+        product.setTitle(newTitle);
+    }
+
+    public void changeCost(List<Product> products, int id, float newCost){
+        Product product = products.get(id);
+        product.setCost(newCost);
+    }
 
     public Optional<Product> findById(Long id){
         return products.stream()
